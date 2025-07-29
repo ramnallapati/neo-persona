@@ -1,9 +1,7 @@
 import { Download, Mail, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const HeroSection = () => {
-  return (
-    <section id="about" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-main relative overflow-hidden">
+  return <section id="about" className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-main relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-glow rounded-full opacity-20 animate-float" />
@@ -28,9 +26,7 @@ const HeroSection = () => {
               Ram Nallapati
             </span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-4">
-            Full Stack Developer & UI/UX Designer
-          </p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-4">SDE | BACKEND DOVELOPER</p>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto leading-relaxed">
             Passionate about creating beautiful, functional, and user-centered digital experiences. 
             I bring ideas to life through code and design.
@@ -39,18 +35,11 @@ const HeroSection = () => {
 
         {/* Call to Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in">
-          <Button 
-            size="lg" 
-            className="bg-gradient-neon hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 animate-glow-pulse"
-          >
+          <Button size="lg" className="bg-gradient-neon hover:shadow-lg hover:shadow-primary/50 transition-all duration-300 animate-glow-pulse">
             <Download className="mr-2 h-5 w-5" />
             Download Resume
           </Button>
-          <Button 
-            variant="outline" 
-            size="lg"
-            className="border-glass-border bg-glass hover:bg-primary/10 transition-all duration-300"
-          >
+          <Button variant="outline" size="lg" className="border-glass-border bg-glass hover:bg-primary/10 transition-all duration-300">
             <Mail className="mr-2 h-5 w-5" />
             Let's Connect
           </Button>
@@ -58,19 +47,21 @@ const HeroSection = () => {
 
         {/* Social Links */}
         <div className="flex justify-center space-x-6 animate-slide-in">
-          {[
-            { icon: Github, href: '#', color: 'hover:text-neon-blue' },
-            { icon: Linkedin, href: '#', color: 'hover:text-neon-purple' },
-            { icon: Mail, href: '#', color: 'hover:text-neon-pink' },
-          ].map((social, index) => (
-            <a
-              key={index}
-              href={social.href}
-              className={`text-muted-foreground ${social.color} transition-all duration-300 hover:scale-110 hover:drop-shadow-lg`}
-            >
+          {[{
+          icon: Github,
+          href: '#',
+          color: 'hover:text-neon-blue'
+        }, {
+          icon: Linkedin,
+          href: '#',
+          color: 'hover:text-neon-purple'
+        }, {
+          icon: Mail,
+          href: '#',
+          color: 'hover:text-neon-pink'
+        }].map((social, index) => <a key={index} href={social.href} className={`text-muted-foreground ${social.color} transition-all duration-300 hover:scale-110 hover:drop-shadow-lg`}>
               <social.icon size={28} />
-            </a>
-          ))}
+            </a>)}
         </div>
 
         {/* Scroll Indicator */}
@@ -80,8 +71,6 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default HeroSection;
