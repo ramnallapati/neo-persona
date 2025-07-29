@@ -2,41 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Modern Portfolio Design System - Sleek dark theme with neon accents */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark portfolio background system */
+    --background: 0 0% 0%;
+    --background-secondary: 0 0% 7%;
+    --background-tertiary: 0 0% 12%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Glass morphism backgrounds */
+    --glass: 0 0% 100% / 0.05;
+    --glass-border: 0 0% 100% / 0.1;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    /* Card backgrounds */
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Popover backgrounds */
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Neon accent colors */
+    --neon-blue: 200 100% 70%;
+    --neon-pink: 320 100% 75%;
+    --neon-green: 120 100% 70%;
+    --neon-purple: 280 100% 70%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Primary using neon blue */
+    --primary: 200 100% 70%;
+    --primary-foreground: 0 0% 5%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Secondary using glass effect */
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 98%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Muted grays */
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 65%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Accent using neon purple */
+    --accent: 280 100% 70%;
+    --accent-foreground: 0 0% 5%;
 
-    --radius: 0.5rem;
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    /* Borders and inputs */
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 200 100% 70%;
+
+    /* Gradients */
+    --gradient-main: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 7%), hsl(0 0% 12%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 7% / 0.8), hsl(0 0% 12% / 0.6));
+    --gradient-neon: linear-gradient(135deg, hsl(200 100% 70%), hsl(280 100% 70%));
+    --gradient-glow: radial-gradient(circle at center, hsl(200 100% 70% / 0.3), transparent 70%);
+
+    /* Modern rounded corners */
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
